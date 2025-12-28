@@ -26,11 +26,46 @@
   .wrap {
     max-width: 860px;
     margin: 0 auto;
-    padding: 28px 14px 40px;
+    padding: 24px 14px 40px;
   }
 
-  h1, h2, h3 {
+  header {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .logo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .logo img {
+    max-width: 180px;
+    height: auto;
+    display: block;
+  }
+
+  .logo-sub {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: var(--muted);
+  }
+
+  h1, h2 {
     letter-spacing: .02em;
+  }
+
+  h1 {
+    margin-bottom: 4px;
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 6px;
   }
 
   .panel {
@@ -39,12 +74,6 @@
     border-radius: 14px;
     padding: 16px 14px 18px;
     margin-bottom: 14px;
-  }
-
-  .meta {
-    color: var(--muted);
-    font-size: 13px;
-    margin-bottom: 6px;
   }
 
   .list {
@@ -77,6 +106,14 @@
 <body>
   <div class="wrap">
 
+    <header>
+      <div class="logo">
+        <!-- Logo-Datei im Repo als: logo-workation.png -->
+        <img src="logo-workation.png" alt="Workation Festival Logo">
+        <div class="logo-sub">Pferde · Funpark · Natur</div>
+      </div>
+    </header>
+
     <h1>Workation Festival 2025</h1>
     <div class="meta">Working Equitation • Funpark • Natur</div>
 
@@ -99,8 +136,6 @@
       </div>
     </div>
 
-
-    <!-- Zeitplan -->
     <div class="panel">
       <h2>Zeitplan</h2>
       <ul class="list">
@@ -110,8 +145,6 @@
       </ul>
     </div>
 
-
-    <!-- Tickets -->
     <div class="panel">
       <h2>Tickets & Teilnahme</h2>
       <ul class="list">
@@ -123,8 +156,6 @@
       </div>
     </div>
 
-
-    <!-- Funpark -->
     <div class="panel">
       <h2>Funpark & Inhalte</h2>
       <ul class="list">
@@ -141,8 +172,6 @@
       </div>
     </div>
 
-
-    <!-- Camping -->
     <div class="panel">
       <h2>Camping & Unterbringung</h2>
       <ul class="list">
@@ -155,8 +184,6 @@
       </ul>
     </div>
 
-
-    <!-- Party -->
     <div class="panel">
       <h2>Party & Abende</h2>
       <ul class="list">
@@ -167,8 +194,6 @@
       </ul>
     </div>
 
-
-    <!-- Verpflegung -->
     <div class="panel">
       <h2>Verpflegung</h2>
       <ul class="list">
@@ -179,8 +204,6 @@
       </ul>
     </div>
 
-
-    <!-- Promotion -->
     <div class="panel">
       <h2>Kontakt & Updates</h2>
       <ul class="list">
@@ -193,7 +216,6 @@
         Zur Anmeldung
       </a>
     </div>
-
 
     <footer>
       Privat organisiert · Teilnahme auf eigene Verantwortung<br>
