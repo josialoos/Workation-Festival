@@ -2,16 +2,20 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Dein Festivalname</title>
+  <title>Workation Festival 2025</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     :root {
-      --bg: #0f172a;
-      --accent: #eab308;
-      --accent-hover: #facc15;
-      --text: #e5e7eb;
-      --text-muted: #9ca3af;
-      --max-width: 800px;
+      --bg: #0f0c09;
+      --bg-soft: #1c1712;
+      --bg-softer: #252019;
+      --accent: #c9a46c;
+      --accent-hover: #d8b782;
+      --text: #f3ebde;
+      --text-muted: #b3a595;
+      --stroke: #8c7b62;
+      --max-width: 880px;
     }
 
     * {
@@ -20,10 +24,14 @@
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+      font-family: "Georgia", "Times New Roman", serif;
+      background: radial-gradient(circle at top, #29231b 0, #0f0c09 60%);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
     }
 
     .page {
@@ -33,32 +41,29 @@
     }
 
     header {
-      padding: 20px 16px 0;
+      padding: 18px 16px 0;
       display: flex;
       justify-content: center;
     }
 
-    .logo {
+    .logo-wrap {
       display: inline-flex;
+      flex-direction: column;
       align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 13px;
-      color: var(--text-muted);
+      gap: 4px;
     }
 
-    .logo-mark {
-      width: 26px;
-      height: 26px;
-      border-radius: 999px;
-      background: conic-gradient(from 180deg, #f97316, #eab308, #22c55e, #3b82f6, #f97316);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: #020617;
+    .logo-wrap img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    .logo-sub {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--text-muted);
     }
 
     main {
@@ -77,35 +82,36 @@
     .badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 4px 10px;
+      gap: 8px;
+      padding: 5px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(140, 123, 98, .6);
+      background: rgba(28, 23, 18, .9);
       color: var(--text-muted);
       font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
-      margin-bottom: 18px;
+      letter-spacing: .18em;
+      margin-bottom: 20px;
     }
 
     .badge-dot {
-      width: 6px;
-      height: 6px;
+      width: 7px;
+      height: 7px;
       border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 6px #22c55e;
+      background: #facc15;
+      box-shadow: 0 0 6px rgba(250, 204, 21, .8);
     }
 
     h1 {
-      font-size: clamp(32px, 6vw, 44px);
-      margin: 0 0 10px;
+      margin: 0 0 8px;
+      font-size: clamp(32px, 5vw, 42px);
+      letter-spacing: .04em;
     }
 
     .hero-sub {
       font-size: 15px;
       color: var(--text-muted);
-      max-width: 520px;
+      max-width: 560px;
       margin: 0 auto 22px;
     }
 
@@ -113,7 +119,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
       margin-bottom: 24px;
       font-size: 13px;
       color: var(--text-muted);
@@ -122,41 +128,40 @@
     .hero-meta span {
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(140, 123, 98, .6);
+      background: rgba(28, 23, 18, .95);
     }
 
     .cta {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      padding: 12px 22px;
+      padding: 12px 26px;
       border-radius: 999px;
       border: none;
       background: var(--accent);
-      color: #1f2937;
-      font-weight: 600;
+      color: #251d14;
+      font-weight: 700;
       font-size: 14px;
-      cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 10px 30px rgba(250, 204, 21, 0.35);
-      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.08s ease;
-      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      cursor: pointer;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .65);
+      transition: transform .08s ease, box-shadow .08s ease, background .08s ease;
+      margin-bottom: 18px;
     }
 
     .cta:hover {
       background: var(--accent-hover);
       transform: translateY(-1px);
-      box-shadow: 0 14px 40px rgba(250, 204, 21, 0.45);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, .75);
     }
 
     .cta:active {
       transform: translateY(0);
-      box-shadow: 0 6px 18px rgba(250, 204, 21, 0.3);
-    }
-
-    .cta span {
-      font-size: 16px;
+      box-shadow: 0 7px 18px rgba(0, 0, 0, .65);
     }
 
     .hero-note {
@@ -169,8 +174,10 @@
       text-align: left;
       padding: 18px 18px 20px;
       border-radius: 18px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.35), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(140, 123, 98, .65);
+      background: radial-gradient(circle at top left,
+        rgba(67, 56, 37, .6),
+        rgba(16, 12, 7, .98));
       margin: 0 auto 16px;
     }
 
@@ -178,7 +185,7 @@
       margin: 0 0 6px;
       font-size: 15px;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: .16em;
       font-weight: 600;
       color: var(--text-muted);
     }
@@ -190,7 +197,7 @@
 
     .info-block ul {
       margin: 8px 0 0;
-      padding-left: 16px;
+      padding-left: 18px;
       font-size: 14px;
     }
 
@@ -198,16 +205,60 @@
       margin-bottom: 4px;
     }
 
+    .three-cols {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 10px 0 4px;
+    }
+
+    .tile {
+      background: rgba(24, 19, 13, .95);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(140, 123, 98, .45);
+    }
+
+    .tile img {
+      display: block;
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .tile-inner {
+      padding: 10px 11px 11px;
+    }
+
+    .tile-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      color: var(--text-muted);
+      margin-bottom: 5px;
+    }
+
+    .tile-text {
+      font-size: 13px;
+      color: var(--text);
+    }
+
     footer {
-      padding: 12px 16px 18px;
+      padding: 14px 16px 18px;
       text-align: center;
-      font-size: 12px;
+      font-size: 11px;
       color: var(--text-muted);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 720px) {
       .info-block {
         padding: 16px 14px 18px;
+      }
+      .three-cols {
+        grid-template-columns: 1fr;
+      }
+      .tile img {
+        height: 180px;
       }
     }
   </style>
@@ -215,9 +266,10 @@
 <body>
   <div class="page">
     <header>
-      <div class="logo">
-        <div class="logo-mark">★</div>
-        <span>DEIN FESTIVALNAME</span>
+      <div class="logo-wrap">
+        <!-- Logo-Datei: logo-workation.png -->
+        <img src="logo-workation.png" alt="Workation Festival Logo">
+        <div class="logo-sub">Pferde · Funpark · Natur</div>
       </div>
     </header>
 
@@ -225,67 +277,107 @@
       <div class="content">
         <div class="badge">
           <div class="badge-dot"></div>
-          <span>Kleines Festival · Große Stimmung</span>
+          <span>Working Equitation · Extreme Trail · Gelände</span>
         </div>
 
-        <h1>Dein Festivalname 2025</h1>
+        <h1>Workation Festival 2025</h1>
 
         <p class="hero-sub">
-          Intimes, unabhängiges Mini-Festival mit guter Musik, Lagerfeuer und netten Leuten.
-          Keine Großproduktion – einfach ein Wochenende zum Abschalten.
+          Drei Tage Pferde-Festival inmitten der Natur: Working-Equitation-Funpark,
+          Geländehindernisse, gemeinsame Ausritte, Camping mit deinem Pferd und
+          abends Party unterm Sternenhimmel.
         </p>
 
         <div class="hero-meta">
-          <span>📍 Dein Ort</span>
+          <span>📍 Nähe Lindow (Mark)</span>
           <span>📅 12.–14. September 2025</span>
-          <span>👥 Limitierte Plätze</span>
+          <span>👥 Limitierte Startplätze</span>
         </div>
 
+        <!-- Link zum Google Formular anpassen -->
         <a class="cta" href="https://forms.gle/DEIN-GOOGLE-FORMULAR" target="_blank" rel="noopener">
-          <span>Jetzt unverbindlich anmelden</span> →
+          Jetzt unverbindlich anmelden
         </a>
 
         <div class="hero-note">
-          Die Plätze sind begrenzt. Die Anmeldung läuft über ein Google Formular – du bekommst danach alle Infos per Mail.
+          Die Plätze sind begrenzt. Die Anmeldung läuft über ein Google Formular –
+          du bekommst danach alle weiteren Infos per Mail.
         </div>
 
         <div class="info-block">
-          <h2>Worum geht’s?</h2>
+          <h2>Worum geht es?</h2>
           <p>
-            Wir sind eine kleine Gruppe von Leuten, die Lust auf ein entspanntes Wochenende mit Musik, Natur
-            und Lagerfeuer hat. Kein großes kommerzielles Festival – eher ein gemeinsames Camp mit Programm.
+            Das Workation Festival ist ein kleines, liebevoll organisiertes
+            Pferdefestival für Menschen, die Working Equitation, Extreme Trail
+            und Gelände lieben – ohne Turnierdruck, dafür mit viel Zeit
+            für Gemeinschaft und Spaß.
           </p>
         </div>
 
         <div class="info-block">
           <h2>Was dich erwartet</h2>
-          <ul>
-            <li>Live-Acts & DJs auf kleiner Bühne</li>
-            <li>Lagerfeuer, Chill-Area, einfache Bar</li>
-            <li>Camping direkt am Gelände (Zelt & Van)</li>
-            <li>Gemeinschaftliche Atmosphäre, maximal entspannt</li>
-          </ul>
+
+          <div class="three-cols">
+            <div class="tile">
+              <!-- optionales Bild: img-camping.jpg -->
+              <img src="img-camping.jpg" alt="Camping mit Pferd">
+              <div class="tile-inner">
+                <div class="tile-title">Camping</div>
+                <div class="tile-text">
+                  Stellplatz für Zelt, Van oder Hänger, Paddocks für dein Pferd
+                  und Lagerfeuer am Abend.
+                </div>
+              </div>
+            </div>
+
+            <div class="tile">
+              <!-- optionales Bild: img-parcours.jpg -->
+              <img src="img-parcours.jpg" alt="Working Equitation Funpark">
+              <div class="tile-inner">
+                <div class="tile-title">Funpark</div>
+                <div class="tile-text">
+                  Kombi-Parcours aus Working Equitation, Extreme Trail und
+                  Geländehindernissen – zum freien Training und in kleinen
+                  Fun-Challenges.
+                </div>
+              </div>
+            </div>
+
+            <div class="tile">
+              <!-- optionales Bild: img-party.jpg -->
+              <img src="img-party.jpg" alt="Party am Abend">
+              <div class="tile-inner">
+                <div class="tile-title">Abendprogramm</div>
+                <div class="tile-text">
+                  Musik, gute Drinks, kleine Sessions & Zeit zum Anstoßen
+                  mit alten und neuen Stallfreunden.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="info-block">
-          <h2>Organisatorisches</h2>
+          <h2>Organisation & Rahmen</h2>
           <p>
-            Nach deiner Anmeldung im Formular schicken wir dir:
+            Nach deiner Anmeldung schicken wir dir alle Details zu Anreise,
+            Startplätzen, Kostenbeitrag, Paddock-Organisation und Hausregeln.
+            Das Festival ist privat organisiert, Teilnahme auf eigene
+            Verantwortung.
           </p>
-          <ul>
-            <li>Adresse & Anreiseinfos</li>
-            <li>Infos zu Kosten / Soli-Beitrag</li>
-            <li>Packliste & Hausregeln</li>
-          </ul>
           <p style="margin-top:8px;">
-            Das Festival ist privat organisiert. Mit der Anmeldung bestätigst du, dass du auf eigene Verantwortung teilnimmst.
+            Wenn du dir unsicher bist, ob das Format zu dir und deinem Pferd
+            passt, schreib uns gern eine kurze Mail und erzähl ein paar Worte
+            über euch.
           </p>
         </div>
+
       </div>
     </main>
 
     <footer>
-      © 2025 Dein Festivalname · Fragen? Schreib uns an <a href="mailto:du@deinfestival.de" style="color:inherit;text-decoration:underline;">du@deinfestival.de</a>
+      © 2025 Workation Festival · Kontakt:
+      <a href="mailto:hallo@workation-festival.de">hallo@workation-festival.de</a>
     </footer>
   </div>
 </body>
